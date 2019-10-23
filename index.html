@@ -9,6 +9,9 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <title>Train Scheduler</title>
 </head>
 
@@ -33,14 +36,7 @@
                             <th scope="col">Minutes Away</th>
                         </tr>
                     </thead>
-                    <tbody class="train_schedule">
-                        <tr>
-                            <td>Trenton Express</td>
-                            <td>Trenton</td>
-                            <td>15</td>
-                            <td>???</td>
-                            <td>???</td>
-                        </tr>
+                    <tbody class="train-schedule">
                     </tbody>
                 </table>
             </div>
@@ -57,18 +53,18 @@
                         <input type="text" class="form-control" id="train-name" placeholder="New Train">
                     </div>
                     <div class="form-group">
-                        <label for="train-name">Destination</label>
+                        <label for="train-destination">Destination</label>
                         <input type="text" class="form-control" id="train-destination" placeholder="New Train">
                     </div>
                     <div class="form-group">
-                        <label for="train-name">First Train Time (HH:mm) - military time</label>
-                        <input type="text" class="form-control" id="train-name" placeholder="New Train">
+                        <label for="first-train">First Train Time (HH:mm) - military time</label>
+                        <input type="text" class="form-control" id="first-train" placeholder="New Train">
                     </div>
                     <div class="form-group">
-                        <label for="train-name">Frequency (min)</label>
-                        <input type="text" class="form-control" id="train-name" placeholder="New Train">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="text" class="form-control" id="train-frequency" placeholder="New Train">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary add">Submit</button>
                 </form>
             </div>
         </div>
@@ -83,8 +79,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   
 </body>
 
 </html>
