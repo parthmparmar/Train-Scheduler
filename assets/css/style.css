@@ -1,0 +1,19 @@
+.jumbotron{
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    color: 
+}
+
+.card-header{
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color:rgb(80, 80, 80);
+    background: url(../images/background.png)
+}
+
+.btn-grad {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
+}
